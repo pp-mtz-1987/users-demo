@@ -1,0 +1,41 @@
+$border-gray: #C2C2C2;
+$dark-gray: #D9D9D9;
+$light-gray: #E9E9E9;
+$light-green: #76CDD3;
+
+.result-item {
+  border: 1px solid $border-gray;
+  margin-bottom: 10px;
+  
+  & > div {
+    padding: 0;
+  }
+
+  .left-panel {
+    & > div {
+      background-color: $dark-gray;
+      padding: 30px 0;        
+    }
+  }
+  
+  .right-panel {
+    & > div {
+      padding: 10px 10px;
+      
+      &:first-child {
+        background-color: $light-gray;  
+      }
+    }
+  }
+}
+
+.confirm-button {
+  background-color: $light-green;
+  border: none;
+  padding: 10px 50px;
+  
+  @media(max-width: 991px) {
+    width: 100% !important;
+    font-size: 25px;
+  }
+}

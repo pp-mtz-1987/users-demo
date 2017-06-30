@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Users</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script type="text/javascript" src="js/angular.min.js"></script>
+  <script type="text/javascript" src="js/ui-bootstrap-custom-2.5.0.min.js"></script>
+  <script type="text/javascript" src="js/ui-bootstrap-custom-tpls-2.5.0.min.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+</head>
+<body ng-app="usersApp">
+	<div class="container" ng-controller="users">
+    <br />
+    <div class="row" ng-show="selectedUsers">
+      <div class="col-xs-12">
+        {{ selectedUsers }} of {{ totalUsers }} selected
+      </div>
+    </div>
+    <br />
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="row result-item" ng-repeat="x in users">
+          <div class="col-xs-1 left-panel">
+            <div class="checkbox-container text-center">
+              <input type="checkbox" value="{{ x.name }}" ng-click="toggleSelection(x.name)" />
+            </div>            
+          </div>
+          <div class="col-xs-11 right-panel">
+            <div>{{ x.name }}</div>
+            <div>{{ x.email }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br />
+    <div class="row">
+      <div class="col-xs-12">
+        <button type="button" class="confirm-button" ng-click="confirm()">Confirm</button>
+      </div>
+    </div>
+    <br />
+  </div>  
+</body>
+</html>

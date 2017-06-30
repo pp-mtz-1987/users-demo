@@ -1,0 +1,17 @@
+<div class="modal-header">
+    <h4 class="modal-title">Selected users</h4>
+</div>
+<div class="modal-body">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12">
+                <ul>
+                  <li ng-repeat="x in userNames">{{ x }}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-default" type="button" ng-click="$ctrl.close()">Cancel</button>
+</div>
